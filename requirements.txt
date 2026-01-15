@@ -1,0 +1,6 @@
+langchain
+langchain-groq
+langchain-community
+jupyterlab
+python-dotenv
+ddgs # For DuckDuckGo search functionality
