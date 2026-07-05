@@ -1,52 +1,67 @@
-[![Shipping files](https://github.com/neuefische/ds-ai-agent/actions/workflows/workflow-02.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-ai-agent/actions/workflows/workflow-02.yml)
-## Ai Agent with LangChain
+# Ai Agent with LangChain
 
-This repo contains two notebooks:
+This repo contains two Jupyter Notebooks for exploring and creating agents using LangChain.
 
-- [`1_intro_agents.ipynb`](1_intro_agents.ipynb) - Introduction to Agents with LangChain
-- [`2_more_agents.ipynb`](2_more_agents.ipynb) - Creating Agents with Built-in Tools
+## Requirements
 
-Either notebook requires credentials to be loaded from a `.env` file, which should contain the following lines:
+The project requires the following dependencies:
+
+- `langchain==0.1.20`
+- `langchain-community==0.0.38`
+- `langchain-groq==0.1.2`
+- `python-dotenv`
+- `jupyterlab`
+- `ddgs`
+
+## Installation
+
+### macOS
+
+To set up the environment on macOS, run the following commands:
+
+```bash
+pyenv local 3.11.3
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### WindowsOS
+
+To set up the environment on WindowsOS, follow these steps for either PowerShell or Git-Bash CLI:
+
+**PowerShell:**
+
+```powershell
+pyenv local 3.11.3
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+**Git-Bash:**
+
+```bash
+pyenv local 3.11.3
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## Usage
+
+To run the project, open one of the Jupyter Notebooks:
+
+- [`1_intro_agents.ipynb`](1_intro_agents.ipynb) for an introduction to Agents with LangChain.
+- [`2_more_agents.ipynb`](2_more_agents.ipynb) for creating Agents with built-in tools.
+
+Both notebooks require credentials to be loaded from a `.env` file, which should contain the following line:
 
 ```
-GROQ_API_KEY=<your groq api key>
+GROQ_API_KEY=your_groq_api_key
 ```
 
-- [Groq API Key](https://console.groq.com/playground) can be generated and used free of charge
-
-## Environment
-
-### **`macOS`** type the following commands :
-
-- Install the virtual environment and the required packages by following commands:
-
-  ```BASH
-  pyenv local 3.11.3
-  python -m venv .venv
-  source .venv/bin/activate
-  pip install --upgrade pip
-  pip install -r requirements.txt
-  ```
-
-### **`WindowsOS`** type the following commands :
-
-- Install the virtual environment and the required packages by following commands.
-
-  For `PowerShell` CLI :
-
-  ```PowerShell
-  pyenv local 3.11.3
-  python -m venv .venv
-  .venv\Scripts\Activate.ps1
-  python -m pip install --upgrade pip
-  pip install -r requirements.txt
-  ```
-  For `Git-Bash` CLI :
-
-  ```
-  pyenv local 3.11.3
-  python -m venv .venv
-  source .venv/Scripts/activate
-  python -m pip install --upgrade pip
-  pip install -r requirements.txt
-  ```
+You can generate a Groq API Key [here](https://console.groq.com/playground).
